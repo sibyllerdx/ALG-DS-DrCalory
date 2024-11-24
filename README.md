@@ -47,12 +47,12 @@ Below are the sources for the formulas used:
 
 # Credits
 This project was developed by:
-Edoardo Ciato 
-Enver Cider
-Filippo De Paulis 
-Pablo Mayoral
-Sibylle Radix
-Jacobo Vila
+- Edoardo Ciato 
+- Enver Cider
+- Filippo De Paulis 
+- Pablo Mayoral
+- Sibylle Radix
+- Jacobo Vila
 
 
 # Licence 
