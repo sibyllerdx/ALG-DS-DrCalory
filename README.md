@@ -1,4 +1,4 @@
-README Dr.Calory
+# **README Dr.Calory**
 
 # Description:
 
@@ -8,27 +8,27 @@ This project was developed and coded using Python 3.10.12. This is a Minimum Via
 
 # Features
 
-DrCaloryCode.ipynb
-  Main code of the project in .ipynb format. Execute in Jupyter/Collaboratory to run.
+1. DrCaloryCode.ipynb
+   - Main code of the project in .ipynb format. Execute in Jupyter/Collaboratory to run.
   
-DrCaloryCode.py
-  Main code of the project in .py format. Execute in a python IDE or console to run.
+3. DrCaloryCode.py
+   - Main code of the project in .py format. Execute in a python IDE or console to run.
   
-COPYING.md
-  Contains GNU licence
+5. COPYING.md
+   - Contains GNU licence
 
 
 # Installation and Setup
 
 To start using Dr.Calory follow these steps:
 
-Access the code 
-  Navigate to the main page of the repository and locate the “DrCaloryCode.ipynb” file. Click on it and visualise it in preview mode.
-  Click the ‘Open Colab’ button at the top of the code 
-  The code is also available in .py form if a python IDE is preferred.
-Set Up Google Collaboratory
-  Sign in to Google Collaboratory if it hasn’t been done yet. The code will automatically be imported 
-Start Using the app
+1. Access the code
+   - Navigate to the main page of the repository and locate the “DrCaloryCode.ipynb” file. Click on it and visualise it in preview mode.
+   - Click the ‘Open Colab’ button at the top of the code
+   - The code is also available in .py form if a python IDE is preferred.
+2. Set Up Google Collaboratory
+   - Sign in to Google Collaboratory if it hasn’t been done yet. The code will automatically be imported 
+3. Start Using the app
 
 # How to use Dr. Calory
 
