@@ -42,11 +42,9 @@ This program is a Minimum Viable Product, only serving as proof of concept. The 
 
 Below are the sources for the formulas used:
 
-[Resting Metabolic rate formula](https://www.garnethealth.org/news/basal-metabolic-rate-calculator))
+[Resting Metabolic rate formula](https://www.garnethealth.org/news/basal-metabolic-rate-calculator)
 
-[Multiplier depending on amount of excersise] 
-(https://www.calculator.net/calorie-calculator.html)
-….
+[Multiplier depending on amount of excersise](https://www.calculator.net/calorie-calculator.html)
 
 # Credits
 This project was developed by:
