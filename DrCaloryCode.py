@@ -1,14 +1,43 @@
-
 def bmr():
-    height = float(input("What is your height (cm): "))
-    weight = float(input("What is your weight (kg): "))
-    age = int(input("What is your age: "))
+  height = ''
+  weight = ''
+  age = ''
+  while True:
+    if not height:
+      height = input("What is your height (cm): ")
+      if not height.isnumeric():
+        print('Invalid height. Enter a whole number.')
+        height = ''
+        continue
+      else:
+        height = float(height)
+    if not weight:
+      weight = input("What is your weight (kg): ")
+      if not weight.isnumeric():
+        print('Invalid weight. Enter a whole number.')
+        weight = ''
+        continue
+      else:
+        weight = float(weight)
+    if not age:
+      age = input("What is your age: ")
+      if not age.isnumeric():
+        print('Invalid age. Enter a whole number.')
+        weight = ''
+        continue
+      else:
+        age = float(age)
     gender = input("What is your gender (M/F): ")
-    if gender.upper() == "M":  # Added .upper() to handle lowercase input
+    if not gender.upper() in ['M', 'F']:
+      print('Invalid input. Enter M or F')
+      gender = ''
+      continue
+    break
+  if gender.upper() == "M":  # Added .upper() to handle lowercase input
         bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
-    else:
+  else:
         bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.33 * age)
-    return bmr
+  return bmr
 
 class Node():
   def __init__(self, value):
@@ -20,7 +49,11 @@ class Node():
       return self.value
     else:
       answer = self.askQuestion()
-      return self.adjacencyList[answer].traversal()
+      if answer in self.adjacencyList:
+        return self.adjacencyList[answer].traversal()
+      else:
+        print('Invalid response! Please try again')
+        return self.traversal()
 
   def insertNode(self, value, key):
     node = Node(value)
@@ -84,6 +117,7 @@ def split(calories):
     carbs = round((calories * 0.4)/4,2)
     fat = round((calories * 0.2)/9,2)
     print(f'\nHere is your daily split:\n')
+    print(f'Total Calories: {round(calories,2)}')
     print(f'Proteins: {protein} grams')
     print(f'Carbs: {carbs} grams')
     print(f'Fat: {fat} grams')
@@ -96,5 +130,3 @@ def main():
     split(calories)
 
 main()
-
-
