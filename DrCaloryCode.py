@@ -12,18 +12,17 @@ def bmr():
       else:
         height = float(height)
     if not weight:
-      weight = input("What is your weight (kg): ")
-      if not weight.isnumeric():
+      try:
+        weight = float(input("What is your weight (kg): "))
+      except ValueError:
         print('Invalid weight. Enter a whole number.')
         weight = ''
         continue
-      else:
-        weight = float(weight)
     if not age:
       age = input("What is your age: ")
       if not age.isnumeric():
         print('Invalid age. Enter a whole number.')
-        weight = ''
+        age = ''
         continue
       else:
         age = float(age)
