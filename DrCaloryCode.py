@@ -113,8 +113,8 @@ time2.insertNode(1.2, '0')
 time2.insertNode(1.1, '1')
 
 def split(calories):
-    protein = round((calories * 0.4)/4,2)
-    carbs = round((calories * 0.4)/4,2)
+    protein = round((calories * 0.24)/4,2)
+    carbs = round((calories * 0.56)/4,2)
     fat = round((calories * 0.2)/9,2)
     print(f'\nHere is your daily split:\n')
     print(f'Total Calories: {round(calories,2)}')
