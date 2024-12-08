@@ -102,9 +102,9 @@ w3.insertNode(2.2, 'd')
 
 goal = Node('What is your goal?\na:Lose weight\nb:Maintain weight\nc:Gain muscle mass')
 
-time0 = goal.insertNode('Over what timespan?\na:Short term\nb:Long term', 'a')
+time0 = goal.insertNode('Over what timespan?\na:6 months or less\nb:Over 6 months', 'a')
 goal.insertNode(1, 'b')
-time2 = goal.insertNode('Over what timespan?\na:Short term\nb:Long term', 'c')
+time2 = goal.insertNode('Over what timespan?\na:6 months or less\nb:Over 6 months', 'c')
 
 time0.insertNode(0.8, 'a')
 time0.insertNode(0.9, 'b')
