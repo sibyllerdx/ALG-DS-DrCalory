@@ -12,12 +12,13 @@ def bmr():
       else:
         height = float(height)
     if not weight:
-      try:
-        weight = float(input("What is your weight (kg): "))
-      except ValueError:
+      weight = input("What is your weight (kg): ")
+      if not weight.isnumeric():
         print('Invalid weight. Enter a whole number.')
         weight = ''
         continue
+      else:
+        weight = float(weight)
     if not age:
       age = input("What is your age: ")
       if not age.isnumeric():
@@ -47,7 +48,7 @@ class Node():
     if self.adjacencyList == {}:
       return self.value
     else:
-      answer = self.askQuestion()
+      answer = self.askQuestion().lower()
       if answer in self.adjacencyList:
         return self.adjacencyList[answer].traversal()
       else:
@@ -62,58 +63,58 @@ class Node():
   def askQuestion(self):
     return input('\n'+self.value+'\n  --->  ')
 
-car = Node('How many times a week do you do cardio?\nExamples: running, swimming, cycling\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more')
+car = Node('How many times a week do you do cardio?\nExamples: running, swimming, cycling\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more')
 
-w0 = car.insertNode('How many times a week do you do strength training like weight lifting?\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '0')
-w1 = car.insertNode('How many times a week do you do strength training like weight lifting?\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '1')
-w2 = car.insertNode('How many times a week do you do strength training like weight lifting?\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '2')
-w3 = car.insertNode('How many times a week do you do strength training like weight lifting?\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '3')
+w0 = car.insertNode('How many times a week do you do strength training like weight lifting?\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'a')
+w1 = car.insertNode('How many times a week do you do strength training like weight lifting?\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'b')
+w2 = car.insertNode('How many times a week do you do strength training like weight lifting?\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'c')
+w3 = car.insertNode('How many times a week do you do strength training like weight lifting?\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'd')
 
-ex00 = w0.insertNode('How many times a week do you do light exercise?\nExamples: walking, yoga, stretching\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '0')
-ex01 = w0.insertNode('How many times a week do you do light exercise?\nExamples: walking, yoga, stretching\n0:Never\n1:Once or twice\n2:Three or four\n3:Five or more', '1')
-w0.insertNode(1.3, '2')
-w0.insertNode(1.5, '3')
+ex00 = w0.insertNode('How many times a week do you do light exercise?\nExamples: walking, yoga, stretching\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'a')
+ex01 = w0.insertNode('How many times a week do you do light exercise?\nExamples: walking, yoga, stretching\na:Never\nb:Once or twice\nc:Three or four\nd:Five or more', 'b')
+w0.insertNode(1.3, 'c')
+w0.insertNode(1.5, 'd')
 
-ex00.insertNode(1, '0')
-ex00.insertNode(1.05, '1')
-ex00.insertNode(1.1, '2')
-ex00.insertNode(1.15, '3')
+ex00.insertNode(1, 'a')
+ex00.insertNode(1.05, 'b')
+ex00.insertNode(1.1, 'c')
+ex00.insertNode(1.15, 'd')
 
-ex01.insertNode(1.1, '0')
-ex01.insertNode(1.15, '1')
-ex01.insertNode(1.2, '2')
-ex01.insertNode(1.25, '3')
+ex01.insertNode(1.1, 'a')
+ex01.insertNode(1.15, 'b')
+ex01.insertNode(1.2, 'c')
+ex01.insertNode(1.25, 'd')
 
-w1.insertNode(1.2, '0')
-w1.insertNode(1.3, '1')
-w1.insertNode(1.5, '2')
-w1.insertNode(1.7, '3')
+w1.insertNode(1.2, 'a')
+w1.insertNode(1.3, 'b')
+w1.insertNode(1.5, 'c')
+w1.insertNode(1.7, 'd')
 
-w2.insertNode(1.5, '0')
-w2.insertNode(1.6, '1')
-w2.insertNode(1.8, '2')
-w2.insertNode(2, '3')
+w2.insertNode(1.5, 'a')
+w2.insertNode(1.6, 'b')
+w2.insertNode(1.8, 'c')
+w2.insertNode(2, 'd')
 
-w3.insertNode(1.75, '0')
-w3.insertNode(1.85, '1')
-w3.insertNode(2, '2')
-w3.insertNode(2.2, '3')
+w3.insertNode(1.75, 'a')
+w3.insertNode(1.85, 'b')
+w3.insertNode(2, 'c')
+w3.insertNode(2.2, 'd')
 
-goal = Node('What is your goal?\n0:Lose weight\n1:Maintain weight\n2:Gain muscle mass')
+goal = Node('What is your goal?\na:Lose weight\nb:Maintain weight\nc:Gain muscle mass')
 
-time0 = goal.insertNode('Over what timespan?\n0:Short term\n1:Long term', '0')
-goal.insertNode(1, '1')
-time2 = goal.insertNode('Over what timespan?\n0:Short term\n1:Long term', '2')
+time0 = goal.insertNode('Over what timespan?\na:Short term\nb:Long term', 'a')
+goal.insertNode(1, 'b')
+time2 = goal.insertNode('Over what timespan?\na:Short term\nb:Long term', 'c')
 
-time0.insertNode(0.8, '0')
-time0.insertNode(0.9, '1')
+time0.insertNode(0.8, 'a')
+time0.insertNode(0.9, 'b')
 
-time2.insertNode(1.2, '0')
-time2.insertNode(1.1, '1')
+time2.insertNode(1.2, 'a')
+time2.insertNode(1.1, 'b')
 
 def split(calories):
-    protein = round((calories * 0.24)/4,2)
-    carbs = round((calories * 0.56)/4,2)
+    protein = round((calories * 0.4)/4,2)
+    carbs = round((calories * 0.4)/4,2)
     fat = round((calories * 0.2)/9,2)
     print(f'\nHere is your daily split:\n')
     print(f'Total Calories: {round(calories,2)}')
